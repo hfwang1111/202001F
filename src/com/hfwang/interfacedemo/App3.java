@@ -1,4 +1,4 @@
-package com.hfwnag.interfacedemo;
+package com.hfwang.interfacedemo;
 
 public class App3 {
 
