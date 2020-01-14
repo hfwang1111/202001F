@@ -12,10 +12,19 @@ public class App {
 		Node header=new Node();
 		
 		Node.createLinkedByTail(reader, header);
-		Node.printLinked(header);	
-		header=Node.convert2(header);
+		System.out.print("Linked:");
 		Node.printLinked(header);
+		System.out.println("\n");	
 		
+//		header=Node.convert2(header);
+//		System.out.print("convert:");
+//		Node.printLinked(header);
+//		System.out.println("\n");
+		
+		Node insertx = new Node(1);
+		header=Node.insertNode(header, insertx);
+		System.out.print("Insert:");
+		Node.printLinked(header);
 		reader.close();
 	}
 }

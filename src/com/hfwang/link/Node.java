@@ -6,17 +6,54 @@ import java.util.Scanner;
 
 public class Node {
 //成员变量	
-	private int data;
-	private Node next;
+	public int data;
+	public Node next;
+
+
+	
+//两个有序链表合并 两个链表头指针ha hb
+//合并成以header为头指针的有序链表 参考严ppt-page80
+	public static Node Merge(Node ha,Node hb){
+		Node header,pa,pb,pc;
+		header=ha;pc=ha;
+		pa=ha.next;pb=hb.next;
+		while(pa!=null&&pb!=null){
+			if(pa.data<pb.data){
+				pc.next=pa;pc=pa;pa=pa.next;
+			}
+			if(pa.data>pb.data){
+				pc.next=pb;pc=pb;pb=pb.next;	
+			}
+			if(pa.data==pb.data){
+				pc.next=pa;pc=pa;pa=pa.next;
+			}
+		}
+		if(pa==null) pc.next=pa;
+		else pc.next=pb;
+		return header;
+	}
 
 //有序列表的插入
-	public static Node insertNode(Node header,Node innner){
-		if(innner.data<=header.date){
-			
+	public static Node insertNode(Node header,Node inner){
+		if(inner.data<=header.data){
+			inner.next=header;return inner;
 		}
-		
+		Node p,q;
+		p=q=header;
+		while(true){
+			p=q;
+			q=q.next;
+			if((inner.data>=p.data)&&(inner.data<=q.data)){
+				p.next=inner;
+				inner.next=q;
+				return header;
+			}
+			if(q.next==null){
+				q.next=inner;
+				return header;
+			}
+		}	
 	}
-	
 	
 //头插法反转静态		
  	public static Node convert1(Node header){
