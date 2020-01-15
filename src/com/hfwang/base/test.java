@@ -17,6 +17,7 @@ public class test {
 		System.out.println("百位是" + a);
 		System.out.println("十位是" + b);
 		System.out.println("个位是" + c);
+		reader.close();
 	}
 
 }

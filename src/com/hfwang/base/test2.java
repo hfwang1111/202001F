@@ -16,6 +16,7 @@ public class test2 {
 			System.out.println(m + "是闰年");
 		else
 			System.out.println(m + "不是闰年");
+		reader.close();
 	}
 
 }

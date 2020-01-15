@@ -1,6 +1,5 @@
 package com.hfwang.base;
 
-import java.util.Scanner;
 
 public class function {
 

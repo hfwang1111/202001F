@@ -1,5 +1,6 @@
 package com.hfwang.statck;
 import com.hfwang.link.Node;
+
 public class App {
 
 	public static void main(String[] args) {

@@ -23,7 +23,7 @@ public class test6 {
 
 		
 		System.out.println("°ÙÎ»ÊÇ"+day2);
-
+		reader.close();
 	}
 
 }

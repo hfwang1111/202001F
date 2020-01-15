@@ -12,7 +12,7 @@ public class Node {
 
 	
 //两个有序链表合并 两个链表头指针ha hb
-//合并成以header为头指针的有序链表 参考严ppt-page80
+//合并成以header为头指针的有序链表 
 	public static Node Merge(Node ha,Node hb){
 		Node header,pa,pb,pc;
 		header=ha;pc=ha;
@@ -50,6 +50,7 @@ public class Node {
 			}
 			if(q.next==null){
 				q.next=inner;
+				inner.next=null;
 				return header;
 			}
 		}	
@@ -154,14 +155,7 @@ public class Node {
 		return createLinkedByTailWithTail(reader,Tailer);
 	}
 
-//有序插入	
-	public static Node insertOrderLinked(Node head,Node inner){
-		
-	
-		 
-		return inner;
-	}
-		
+
 //静态输出	
 	public static void printLinked(Node head){		
 		while(head!=null){

@@ -24,6 +24,7 @@ public class Array_12 {
 			if(led[i]==1) 
 				System.out.println(i);
 		}
+		reader.close();
 	}
 
 }
