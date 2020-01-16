@@ -1,3 +1,5 @@
+//¡¥±Ì∂”¡–
+
 package com.hfwang.queue;
 
 import com.hfwang.link.Node;
@@ -11,18 +13,27 @@ public class LinkedQueue {
 		size=0;
 	}
 	
-	boolean inQueue(Node x){
-		tail.next=x;
-		tail=x;
+	public boolean inQueue(Node x){
+		if(head==null){
+			this.head=x;
+			this.tail=x;
+		}else{
+			this.tail.next=x;
+			this.tail=x;
+		}
+		return true;
 		
-		size++;
 	}
 	
-	Node outQueue(){
+	public Node outQueue(){
+		if(this.head==null) return null;
 		Node x=head;
 		head=head.next;
-		size--;
 		return x;
 	}
 	
+	public boolean isEmpty(){
+		return head==null;
+	}
+
 }

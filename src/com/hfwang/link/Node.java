@@ -1,16 +1,23 @@
+//链表节点类
+
 package com.hfwang.link;
 
 import java.util.Scanner;
-
-
 
 public class Node {
 //成员变量	
 	public int data;
 	public Node next;
-
-
 	
+//有参构造方法	
+	public Node(int data){
+		this.data=data;
+		this.next=null;
+	}
+			
+//无参构造方法	
+	public Node(){			
+	}
 //两个有序链表合并 两个链表头指针ha hb
 //合并成以header为头指针的有序链表 
 	public static Node Merge(Node ha,Node hb){
@@ -125,7 +132,7 @@ public class Node {
 		
 		int m=reader.nextInt();
 		while(m>0){
-			Node p = new Node(m);
+			Node p=new Node(m);
 			p.next=head;
 			head=p;
 			m=reader.nextInt();
@@ -154,7 +161,6 @@ public class Node {
 		Node Tailer = Header; 
 		return createLinkedByTailWithTail(reader,Tailer);
 	}
-
 
 //静态输出	
 	public static void printLinked(Node head){		
@@ -189,16 +195,7 @@ public class Node {
 		this.next = next;
 	}
 	
-//有参构造方法	
-	public Node(int data){
-		this.data=data;
-		this.next=null;
-	}
-		
-//无参构造方法	
-	public Node(){
-			
-	}
+
 			
 	
 

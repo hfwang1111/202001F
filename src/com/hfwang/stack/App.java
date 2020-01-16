@@ -1,4 +1,4 @@
-package com.hfwang.statck;
+package com.hfwang.stack;
 import com.hfwang.link.Node;
 
 public class App {
