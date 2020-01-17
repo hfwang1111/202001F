@@ -13,7 +13,7 @@ public class test {
 		a = m / 100;
 		b = m / 10 - a * 10;
 		c = m % 10;
-
+        
 		System.out.println("百位是" + a);
 		System.out.println("十位是" + b);
 		System.out.println("个位是" + c);
